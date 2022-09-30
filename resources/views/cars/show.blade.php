@@ -7,10 +7,8 @@
     <title>Cars</title>
 </head>
 <body>
-    @foreach ($cars as $car )
-        <ul>
-            <li>{{ $car->producer }}</li>
-        </ul>
-    @endforeach
+    <h1>{{ $car->title }}</h1>
+    <h3>This is model {{ $car->producer }}</h3>
+    <p>This car has {{$car->number_of_doors}} doors</p>
 </body>
 </html>
