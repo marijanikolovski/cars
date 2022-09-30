@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cars</title>
-</head>
-<body>
-    <h1>{{ $car->title }}</h1>
-    <h3>This is model {{ $car->producer }}</h3>
-    <p>This car has {{$car->number_of_doors}} doors</p>
-</body>
-</html>
+@extends('layout.master')
+
+@section('title', 'Car')
+
+@section('content')
+
+    <main role="main" class="container">
+        <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 font-italic">{{ $car->title }}</h1>
+            </div>
+        </div>
+        <div>
+            <h2>{{ $car->producer }}</h2>
+            <p>This car has {{$car->number_of_doors}} doors</p>
+        </div>
+    </main><!-- /.container -->
+
+@endsection
